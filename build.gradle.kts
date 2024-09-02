@@ -56,7 +56,7 @@ publishing {
 
             groupId = "dev.redgamer6427a" // Replace with your package's group ID
             artifactId = "RedUtils" // Replace with your artifact ID
-            version = "1.0.2" // Replace with your package's version
+            version = "1.0.0" // Replace with your package's version
         }
     }
 }
