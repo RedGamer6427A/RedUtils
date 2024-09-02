@@ -1,6 +1,7 @@
 
 plugins {
     id("java")
+    `maven-publish`
 }
 
 group = "dev.redgamer6427a"
