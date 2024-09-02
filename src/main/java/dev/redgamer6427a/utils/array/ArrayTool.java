@@ -3,6 +3,7 @@ package dev.redgamer6427a.utils.array;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class ArrayTool<T> {
@@ -42,7 +43,8 @@ public class ArrayTool<T> {
      */
     public ArrayTool<T> reverse() {
         List<T> l = Arrays.stream(array).toList();
-        l.reversed();
+        Collections.reverse(l);
+
         array = l.toArray((T[]) Array.newInstance(array.getClass().getComponentType(), l.size()));
         return this;
     }
