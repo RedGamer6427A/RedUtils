@@ -34,3 +34,29 @@ tasks.jar {
 
     from(sourceSets.main.get().output)
 }
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/RedGamer6427A/RedUtils")
+
+            credentials {
+                username = "RedGamer6427A"
+                password = "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"
+            }
+        }
+    }
+
+    publications {
+        create<MavenPublication>("gpr") {
+            from(components["java"])
+
+            // If you have a custom artifact, use this instead:
+            // artifact("build/libs/your-artifact.jar")
+
+            groupId = "dev.redgamer6427a" // Replace with your package's group ID
+            artifactId = "RedUtils" // Replace with your artifact ID
+            version = "1.0.2" // Replace with your package's version
+        }
+    }
+}
