@@ -37,7 +37,7 @@ tasks.jar {
 publishing {
     repositories {
         maven {
-            name = "GitHubPackages"
+            name = "RedUtils"
             url = uri("https://maven.pkg.github.com/RedGamer6427A/RedUtils")
 
             credentials {
