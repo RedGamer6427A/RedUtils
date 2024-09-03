@@ -1,6 +1,6 @@
-package dev.redgamer6427a.utils.cli;
+package dev.redgamer6427a.redutils.cli;
 
-import dev.redgamer6427a.utils.array.ArrayTool;
+import dev.redgamer6427a.redutils.array.ArrayTool;
 
 import java.util.ArrayList;
 import java.util.List;

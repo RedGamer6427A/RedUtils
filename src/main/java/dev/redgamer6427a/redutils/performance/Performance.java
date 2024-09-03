@@ -1,7 +1,7 @@
-package dev.redgamer6427a.utils.performance;
+package dev.redgamer6427a.redutils.performance;
 
-import dev.redgamer6427a.utils.cli.CLI;
-import dev.redgamer6427a.utils.math.MathExt;
+import dev.redgamer6427a.redutils.cli.CLI;
+import dev.redgamer6427a.redutils.math.MathExt;
 
 import java.util.ArrayList;
 import java.util.List;

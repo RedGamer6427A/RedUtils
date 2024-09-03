@@ -1,11 +1,10 @@
-package dev.redgamer6427a.utils.math;
+package dev.redgamer6427a.redutils.math;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.IntFunction;
 
 public class MathExt {
     public static double average(double[] data) {

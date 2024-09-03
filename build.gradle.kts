@@ -1,11 +1,10 @@
-
 plugins {
     id("java")
-    `maven-publish`
+    id("maven-publish")
 }
 
 group = "dev.redgamer6427a"
-version = "1.0-SNAPSHOT"
+version = "1.0.0"
 
 repositories {
     mavenCentral()
@@ -15,8 +14,6 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation("org.jetbrains:annotations:24.0.1")
-
-
 }
 
 tasks.test {
@@ -24,27 +21,56 @@ tasks.test {
 }
 
 tasks.jar {
-    archiveBaseName.set("RedUtilsTest")
-    archiveVersion.set("1.0.5")
-    archiveClassifier.set("") // Leave empty if no classifier is needed
+    archiveBaseName.set("RedUtils")
+    archiveVersion.set("1.0.0") // Ensure this version matches the one you're publishing
+    archiveClassifier.set("") // Leave empty if no classifier is necessary
 
-    manifest {
-        attributes["Main-Class"] = "dev.redgamer6427a.Main" // Replace with your main class
-    }
 
     from(sourceSets.main.get().output)
 }
+
 publishing {
     repositories {
         maven {
-            name = "OSSRH"
-            url = uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/")
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/redgamer6427a/RedUtils")
             credentials {
-                username = System.getenv("MAVEN_USERNAME")
-                password = System.getenv("MAVEN_PASSWORD")
+                username = "redgamer6427a"
+                password = "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"
             }
         }
     }
+    publications {
+        create<MavenPublication>("gpr") {
+            from(components["java"])
 
+            groupId = "dev.redgamer6427a"
+            artifactId = "redutils"
+            version = "1.0.0"
 
+            // Optionally customize POM
+            pom {
+                name.set("RedUtilsTest")
+                description.set("A description of your project")
+                url.set("https://github.com/redgamer6427a/RedUtils")
+                licenses {
+                    license {
+                        name.set("The Apache License, Version 2.0")
+                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                    }
+                }
+                developers {
+                    developer {
+                        id.set("redgamer6427a")
+
+                    }
+                }
+                scm {
+                    connection.set("scm:git:git://github.com/redgamer6427a/RedUtils.git")
+                    developerConnection.set("scm:git:ssh://github.com:redgamer6427a/RedUtils.git")
+                    url.set("https://github.com/redgamer6427a/RedUtils")
+                }
+            }
+        }
+    }
 }

@@ -1,4 +1,4 @@
-package dev.redgamer6427a.utils.regex;
+package dev.redgamer6427a.redutils.regex;
 
 import java.util.regex.Pattern;
 

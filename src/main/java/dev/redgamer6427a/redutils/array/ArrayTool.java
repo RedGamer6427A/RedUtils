@@ -1,4 +1,4 @@
-package dev.redgamer6427a.utils.array;
+package dev.redgamer6427a.redutils.array;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;

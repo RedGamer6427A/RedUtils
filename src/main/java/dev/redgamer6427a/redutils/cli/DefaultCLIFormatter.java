@@ -1,4 +1,4 @@
-package dev.redgamer6427a.utils.cli;
+package dev.redgamer6427a.redutils.cli;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

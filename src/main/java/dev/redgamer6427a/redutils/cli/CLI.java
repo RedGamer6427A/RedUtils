@@ -1,4 +1,4 @@
-package dev.redgamer6427a.utils.cli;
+package dev.redgamer6427a.redutils.cli;
 
 
 
@@ -22,7 +22,7 @@ public class CLI {
     private final Logger logger;
 
     /**
-     * The CLI constructor. Best initialized in the Main thread on entry. Puts the Instance into {@link dev.redgamer6427a.utils.cli.CLI#CLI}
+     * The CLI constructor. Best initialized in the Main thread on entry. Puts the Instance into {@link dev.redgamer6427a.redutils.cli.CLI#CLI}
      * @param loggerName the name of the logger. If null, it creates an anonymous logger
      */
     public CLI(@Nullable String loggerName) {
@@ -49,7 +49,7 @@ public class CLI {
         }
     }
     /**
-     * The CLI constructor. Best initialized in the Main thread on entry. Puts the Instance into {@link dev.redgamer6427a.utils.cli.CLI#CLI}. This constructor is used if you want to use your own Formatter
+     * The CLI constructor. Best initialized in the Main thread on entry. Puts the Instance into {@link dev.redgamer6427a.redutils.cli.CLI#CLI}. This constructor is used if you want to use your own Formatter
      * @param loggerName the name of the logger. If null, it creates an anonymous logger.
      * @param formatter the formatter you want to use.
      */
@@ -78,8 +78,8 @@ public class CLI {
     }
 
     /**
-     * Gets the CLI instance in {@link dev.redgamer6427a.utils.cli.CLI#CLI}.
-     * @return the CLI instance in {@link dev.redgamer6427a.utils.cli.CLI#CLI}.
+     * Gets the CLI instance in {@link dev.redgamer6427a.redutils.cli.CLI#CLI}.
+     * @return the CLI instance in {@link dev.redgamer6427a.redutils.cli.CLI#CLI}.
      */
     public static CLI get(){
         return CLI;
