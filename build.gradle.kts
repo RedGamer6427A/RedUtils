@@ -50,7 +50,7 @@ publishing {
 
             groupId = "dev.redgamer6427a"
             artifactId = "redutils"
-            version = "1.0.2"
+            version = "1.0.3"
 
 
             // Optionally customize POM
