@@ -1,6 +1,10 @@
+import org.gradle.tooling.model.gradle.GradlePublication
+
 plugins {
     id("java")
     id("maven-publish")
+
+
 }
 
 group = "dev.redgamer6427a"
@@ -46,17 +50,18 @@ publishing {
 
             groupId = "dev.redgamer6427a"
             artifactId = "redutils"
-            version = "1.0.0"
+            version = "1.0.2"
+
 
             // Optionally customize POM
             pom {
-                name.set("RedUtilsTest")
-                description.set("A description of your project")
+                name.set("RedUtils")
+                description.set("My own Utility Library")
                 url.set("https://github.com/redgamer6427a/RedUtils")
                 licenses {
                     license {
-                        name.set("The Apache License, Version 2.0")
-                        url.set("http://www.apache.org/licenses/LICENSE-2.0.txt")
+                        name.set("RedUtils License")
+                        url.set("https://github.com/RedGamer6427A/RedUtils/blob/master/LICENSE")
                     }
                 }
                 developers {
@@ -72,5 +77,6 @@ publishing {
                 }
             }
         }
+
     }
 }

@@ -42,9 +42,8 @@ public class ArrayTool<T> {
      * @return the instance
      */
     public ArrayTool<T> reverse() {
-        List<T> l = Arrays.stream(array).toList();
+        List<T> l = new ArrayList<>(Arrays.asList(array));
         Collections.reverse(l);
-
         array = l.toArray((T[]) Array.newInstance(array.getClass().getComponentType(), l.size()));
         return this;
     }
